@@ -11,7 +11,7 @@ public class PayrollCalculator {
         double payRate = scanner.nextDouble();
         double grossPay = workedHours * payRate;
         System.out.println("Employee: " + name);
-
+        System.out.printf("Gross pay: $%.2f%n", grossPay);
 
     }
 }
