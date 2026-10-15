@@ -7,6 +7,10 @@ public class PayrollCalculator {
         String name = scanner.nextLine();
         System.out.print("Enter the hours worked: ");
         double workedHours = scanner.nextDouble();
+        System.out.print("Enter the pay rate: ");
+        double payRate = scanner.nextDouble();
+        double grossPay = workedHours * payRate;
+        System.out.println("Employee: " + name);
 
 
     }
