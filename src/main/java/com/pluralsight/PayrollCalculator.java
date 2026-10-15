@@ -9,7 +9,15 @@ public class PayrollCalculator {
         double workedHours = scanner.nextDouble();
         System.out.print("Enter the pay rate: ");
         double payRate = scanner.nextDouble();
-        double grossPay = workedHours * payRate;
+
+        double grossPay;
+        if (workedHours > 40) {
+            double overtime = workedHours - 40;
+            grossPay = (40 * payRate) + (overtime * payRate * 1.5);
+        } else {
+            grossPay = workedHours * payRate;
+        }
+
         System.out.println("Employee: " + name);
         System.out.printf("Gross pay: $%.2f%n", grossPay);
 
