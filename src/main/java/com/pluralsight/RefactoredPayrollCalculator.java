@@ -8,6 +8,8 @@ public class RefactoredPayrollCalculator {
         double workedHours = getWorkedHours(scanner);
         double payRate = getPayRate(scanner);
 
+        double grossPay = solutionGrossPay(workedHours, payRate);
+
 
 
     }
@@ -23,5 +25,14 @@ public class RefactoredPayrollCalculator {
         System.out.print("Enter the pay rate: ");
         return scanner.nextDouble();
 
+    }
+
+    public static double solutionGrossPay(double workedHours, double payRate) {
+        if (workedHours > 40) {
+            double overtime = workedHours - 40;
+            return (40 * payRate) + (overtime * payRate * 1.5);
+        } else {
+            return workedHours * payRate;
+        }
     }
 }
