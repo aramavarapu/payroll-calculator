@@ -5,7 +5,10 @@ public class RefactoredPayrollCalculator {
         Scanner scanner = new Scanner(System.in);
 
         String name = getName(scanner);
-        double workedHourse = getWorkedHours(scanner);
+        double workedHours = getWorkedHours(scanner);
+        double payRate = getPayRate(scanner);
+
+
 
     }
     public static String getName(Scanner scanner) {
@@ -13,7 +16,12 @@ public class RefactoredPayrollCalculator {
         return scanner.nextLine();
     }
     public static double getWorkedHours(Scanner scanner) {
+        System.out.print("Enter the hours worked: ");
+        return scanner.nextDouble();
+    }
+    public static double getPayRate(Scanner scanner) {
         System.out.print("Enter the pay rate: ");
         return scanner.nextDouble();
+
     }
 }
