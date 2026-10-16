@@ -10,6 +10,8 @@ public class RefactoredPayrollCalculator {
 
         double grossPay = solutionGrossPay(workedHours, payRate);
 
+        results(name, grossPay);
+
 
 
     }
@@ -34,5 +36,9 @@ public class RefactoredPayrollCalculator {
         } else {
             return workedHours * payRate;
         }
+    }
+    public static void results(String name, double grossPay) {
+        System.out.println("Employee: " + name);
+        System.out.printf("Gross pay: $%.2f%n", grossPay);
     }
 }
