@@ -39,6 +39,7 @@ public class RefactoredPayrollCalculator {
     }
     public static void results(String name, double grossPay) {
         System.out.println("Employee: " + name);
+        // Formated properly and adds a new line
         System.out.printf("Gross pay: $%.2f%n", grossPay);
     }
 }
