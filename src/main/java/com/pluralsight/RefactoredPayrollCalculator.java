@@ -8,9 +8,9 @@ public class RefactoredPayrollCalculator {
         double workedHours = getWorkedHours(scanner);
         double payRate = getPayRate(scanner);
 
-        double grossPay = solutionGrossPay(workedHours, payRate);
+        double grossPay = calculateGrossPay(workedHours, payRate);
 
-        results(name, grossPay);
+        displayResults(name, grossPay);
 
 
 
@@ -29,7 +29,7 @@ public class RefactoredPayrollCalculator {
 
     }
 
-    public static double solutionGrossPay(double workedHours, double payRate) {
+    public static double calculateGrossPay(double workedHours, double payRate) {
         if (workedHours > 40) {
             double overtime = workedHours - 40;
             return (40 * payRate) + (overtime * payRate * 1.5);
@@ -37,7 +37,7 @@ public class RefactoredPayrollCalculator {
             return workedHours * payRate;
         }
     }
-    public static void results(String name, double grossPay) {
+    public static void displayResults(String name, double grossPay) {
         System.out.println("Employee: " + name);
         // Formated properly and adds a new line
         System.out.printf("Gross pay: $%.2f%n", grossPay);
